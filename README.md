@@ -1,2 +1,0 @@
-* Test one
-* test2

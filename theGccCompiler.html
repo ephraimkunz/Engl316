@@ -1,24 +1,42 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">            
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">   
+        <title>The GCC Compiler</title>         
     </head>
     <body>
-        <title>The GCC Compiler</title>
         <div style="padding: 20px">
             <h1 class="h1 text-center">
                 The GCC Compiler
             </h1>
             <p>
-                    The GCC compiler is a computer program that transforms source code from a human readable format, like the C programming language, to a machine readable format known as assembly. This transformation is necessary because computer hardware doesn’t know how to interpret high level constructs like branching and only understands 1s and 0s. 
-                    GCC stands for GNU Compiler Collection. Thus, it is actually a collection of tools for compiling the code of various programming languages, although when we say the gcc compiler, we are referring to the compiler for the specific language we are using. It is developed and released for free by the Free Software Foundation.
-                    Compilers consist of 3 stages: the front-end, the optimizer, and the backend.
+                The GCC compiler is a computer program that transforms source code from a human readable format, like the C programming language, to a machine readable format known as assembly. 
+                This transformation is necessary because computer hardware doesn’t know how to interpret high level constructs like branching and only understands 1s and 0s. 
+            <p>     
+                GCC stands for GNU Compiler Collection. 
+                Thus, it is actually a collection of tools for compiling the code of various programming languages, although when we say the gcc compiler, we are referring to the compiler for the specific language we are using.
+                It is developed and released for free by the Free Software Foundation.
+            </p>
+                Compilers consist of 3 stages: the front-end, the optimizer, and the backend.</p>
                 
-                The front end parses the code you have written and translates it to an intermediate format. This intermediate code is not as high level as the source code, but not as low level as assembly code. During this phase, it checks for syntax errors in the program
-                    The optimizer is responsible for making the code you have written run fast and take up less room. It does this by applying various transformations on the intermediate code format that preserve the meaning of your program. The program that will actually run on the hardware may look nothing like what you actually wrote, but will have the same effect and is better at taking advantage of the hardware than you are. 
-                    The backend generates machine code from the intermediate representation. Each processor family has a different “language” that it understands. So a program that your phone can understand makes no sense to your laptop. The backend knows which processor it is running on and generates the correct assembly code.
-                    Compilers are very complex computer programs that turn other programs into code that the processor can execute. The three stage architecture described above allows one compiler to be used on many different processors, and for many languages. GCC is one such processor that is freely available.
-                
+            <p>     
+                The front end parses the code you have written and translates it to an intermediate format. 
+                This intermediate code is not as high level as the source code, but not as low level as assembly code.
+                During this phase, it checks for syntax errors in the program.
+            </p>
+            <p>
+                The optimizer is responsible for making the code you have written run fast and take up less room. 
+                It does this by applying various transformations on the intermediate code format that preserve the meaning of your program.
+                The program that will actually run on the hardware may look nothing like what you actually wrote, but will have the same effect and is better at taking advantage of the hardware than you are.
+            </p>
+            <p>
+                The backend generates machine code from the intermediate representation.
+                Each processor family has a different “language” that it understands. So a program that your phone can understand makes no sense to your laptop.
+                The backend knows which processor it is running on and generates the correct assembly code.
+            </p> 
+                Compilers are very complex computer programs that turn other programs into code that the processor can execute. 
+                The three stage architecture described above allows one compiler to be used on many different processors, and for many languages.
+                GCC is one such processor that is freely available.
             </p>
         </div>
     </body>

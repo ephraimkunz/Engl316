@@ -1,85 +1,154 @@
 <html>
     <head>
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">            
+        <title>Your First C Program</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <style>
+            li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            code {
+                white-space: pre-wrap;       /* css-3 */
+                white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+                white-space: -pre-wrap;      /* Opera 4-6 */
+                white-space: -o-pre-wrap;    /* Opera 7 */
+                word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            }
+        </style>
     </head>
     <body>
-        <title>Your First C Program</title>
-        <div style="padding: 20px">
-            <h1 class="h1 text-center">
-                Your First C Program
-            </h1>
-            <h3>Introduction</a></h3>
-            <p>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>
+                    Your First C Program
+                </h1>
+                <h3>
+                    Introduction
+                </h3>
+                <p>
                     This tutorial will teach you how to build and run your first computer program. 
-                    It will use the programming language C, a common language that is used everywhere that software is written. 
-                    Your program will be simple, just printing a few lines to the screen. But it is the stepping stone for bigger and better programs.
+                    It will use the programming language C, a common language that is used everywhere software is written. 
+                    Your program will be simple, just printing a single line to the screen, but it will be the stepping stone for bigger and better programs.
+                </p>
+                <p>
                     Click <a href="./whyLearnToCode.html">here</a> to see why learning to code is valuable.
-            </p>
-            <h3>List of Equipment/Materials</h3>
-            <ul>
-                <li>
-                    Computer running the <a href="https://www.ubuntu.com">Ubuntu operating system</a> (Not Mac or Windows)
-                </li>
-                <li>
-                    Basic computer familiarity
-                </li>
-            </ul>
-            <h3>Instructions</h3>
-            <ol>
-                <li>
-                    Launch the program "Text Editor" that comes with your Ubuntu operating system. 
-                    If you're unfamilier with Linux, follow the instructions below:
-                    <ol>
-                        <li>
-                            Click on the "Launcher" icon in the upper right corner of the screen. It will look like this:<br/>
-                            <img style="width: 400px; margin: 10px" src="ubuntu_launcher_icon.png"/>
-                        </li>
-                        <li>
-                            A search bar should open up, looking like this:<br/>
-                            <img style="width: 400px; margin: 10px" src="ubuntu_launcher_open.png"/><br/>            
-                            Type <code>Text Editor</code> into it.
-                        </li>
-                        <li>
-                            Click the first application shown, which should be named Text Editor.
-                        </li>
-                    </ol>
-                    <div class="alert alert-info">
-                        <strong>Info:</strong> If you have another text editor installed that you prefer to use, go ahead. However, make sure you use one that won't change the characters you type to make them pretty. Microsoft Word or other word processors are not suitable for use as coding text editors.
-                    </div>
-                </li>
-                <li>
-                    The text editor will launch with a new document. Save your new empty file as <i>helloworld.c</i> to the Desktop.
-                </li>
-                <li> In the <i>helloworld.c</i> file, type or copy and paste the following: <br><br>
-                    <pre>
-                        <code>
-                        #include &lt;stdio.h&gt;
+                </p>
+            </div>
 
-                        int main() {
-                            printf("Hello World!\n");
-                            return (0);
-                        }
-                        </code>
-                    </pre>
-                    Click <a href="./helloWorldProgram.html">here</a> to understand what the lines you just typed will do.
-                    <div class="alert alert-warning">
-                        <strong>Warning:</strong> Computers can be very nitpicky about spacing, punctuation, and capitalization.
-                        For all the text you will type or copy and paste in this tutorial, make sure that you match our spacing, punctuation, and capitalization exactly.
-                        If the computer doesn't do what you expected when you type a command, double check your typing!
+            <div class="container">
+                <h3>List of Equipment/Materials</h3>
+                <p>
+                    You'll need to get a few things ready before you're ready to start this tutorial:
+                </p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        Computer running the <a href="https://www.ubuntu.com">Ubuntu operating system</a> (Not Mac or Windows)
+                    </li>
+                    <li class="list-group-item">
+                        Basic computer familiarity
+                    </li>
+                </ul>
+            </div>
+
+            <div class="container pt-3">
+                <div class="row">
+                    <h3>Instructions</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ol>
+                            <li>
+                                Launch the program "Text Editor" that comes with your Ubuntu operating system.
+                            </li>
+                        </ol>
+
+                        <div class="alert alert-info">
+                            <strong>Info:</strong> If you have another text editor installed that you prefer to use, go ahead. However, make sure you use one that won't change the characters you type to make them pretty. Microsoft Word or other word processors are not suitable for use as coding text editors.
+                        </div>
+
                     </div>
-                </li>
-                <li>
-                    Save <i>helloworld.c</i> to the Desktop.
-                </li>
-                <li>Open the Bash terminal by pressing ctrl+alt+t. Learn more about the terminal <a href="./shell.html">here</a>.</li>
-                <li>In the terminal window, type <code>cd Desktop</code> and press enter to navigate to the Desktop. The prompt the shell gives you will change to show that you are now on the Desktop.</li>
-                <li>In the terminal, type <code>gcc helloworld.c</code> and press enter to compile the program. If everything worked, nothing should be printed on the screen except for a new prompt. Learn more about gcc <a href="./theGccCompiler.html">here</a>.</li>
-                <li>In the terminal, type <code>./a.out</code> and press enter to run the program. If everything worked, you should see the words "Hello World!" printed on a line by themselves in the shell. Learn more about what you just ran <a href="./executables.html">here</a>.</li>
-            </ol>
-            <h3>Conclusion</h3>
-            <p>Congratulations! You have written your first C program. Although humble, this program shows all the necessary steps for writing, compiling and running a program. For more convenient tutorials on programming in C,
-                visit <a href="https://www.tutorialspoint.com/cprogramming/">this website</a>.
-            </p>
+
+                    <div class="col-md-6">
+                        If you're unfamiliar with Linux, follow these instructions to open up "Text Editor":
+
+                        <ol>
+                            <li>
+                                Click on the "Launcher" icon in the upper right corner of the screen. It is found here:
+                                <img src="ubuntu_launcher_icon.png" class="d-block w-75 p-3" />
+                            </li>
+                            <li>
+                                A search bar should open up, looking like this:
+
+                                <img src="ubuntu_launcher_open.png" class="d-block w-75 p-3" />
+
+                                Type <code>Text Editor</code> into it.
+                            </li>
+                            <li>
+                                Click the first application shown, which should be named "Text Editor."
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <ol start="2">
+                        <li>
+                            The text editor will launch with a new document.<br />
+                            Save your new empty file as <i>helloworld.c</i> to the Desktop.
+                        </li>
+
+                        <div class="alert alert-warning mt-3">
+                            <strong>Warning:</strong> Computers can be very nitpicky about spacing, punctuation, and capitalization.
+                            For all the text you will type or copy and paste in this tutorial, make sure that you match our spacing, punctuation, and capitalization exactly.
+                            If the computer doesn't do what you expected when you type a command, double check your typing!
+                        </div>
+
+                        <li>
+                            In the <i>helloworld.c</i> file open in "Text Editor," type or copy and paste the following code:
+
+<code>
+#include &lt;stdio.h&gt;
+
+int main() {
+	printf("Hello World!\n");
+	return (0);
+}
+</code>
+
+							Click <a href="./helloWorldProgram.html">here</a> for an explanation of what the program you just typed will do.
+                        </li>
+						<li>
+                        	Save <i>helloworld.c</i> to the Desktop.
+                    	</li>
+                    	<li>
+                    		Open the Bash terminal by pressing <code>ctrl+alt+t</code>.<br />
+                    		Learn more about the terminal <a href="./shell.html">here</a>.
+                		</li>
+                		<li>
+                			In the terminal window, type <code>cd Desktop</code> and press enter to navigate to the Desktop.<br />
+                			The prompt the shell gives you will change to show that you are now on the Desktop.
+            			</li>
+            			<li>
+            				In the terminal, type <code>gcc helloworld.c</code> and press enter to compile the program.<br />
+            				If everything worked, nothing should be printed on the screen except for a new prompt.<br />
+            				Learn more about gcc <a href="./theGccCompiler.html">here</a>.
+        				</li>
+        				<li>
+        					In the terminal, type <code>./a.out</code> and press enter to run the program.<br />
+        					If everything worked, you should see the words "Hello World!" printed on a line by themselves in the shell.<br />
+        					Learn more about what you just ran <a href="./executables.html">here</a>.
+    					</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="container">
+            	<h3>Conclusion</h3>
+
+            	<p>
+            		Congratulations! You have written your first C program. Although humble, this program shows all the necessary steps for writing, compiling and running a program. For more convenient tutorials on programming in C, visit <a href="https://www.tutorialspoint.com/cprogramming/">this website</a>.
+            	</p>
+            </div>
         </div>
     </body>
 </html>

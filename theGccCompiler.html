@@ -5,45 +5,56 @@
         <title>The GCC Compiler</title>         
     </head>
     <body>
-        <div style="padding: 20px">
-            <h1 class="h1 text-center">
-                The GCC Compiler
-            </h1>
-            <p>
-                The GCC compiler is a computer program that transforms source code from a human-readable format, like the C programming language, to a machine-readable format known as assembly. 
-                This transformation is necessary because computer hardware doesn’t know how to interpret high level constructs like branching and only understands 1s and 0s. 
-            </p>
-            <p>     
-                GCC stands for GNU Compiler Collection. 
-                Thus, it is actually a collection of tools for compiling the code of various programming languages, although when we say the gcc compiler, we are referring to the compiler for the specific language we are using.
-                It is developed and released for free by the Free Software Foundation.
-            </p>
-            <p>
-                Compilers consist of 3 stages: the frontend, the optimizer, and the backend.
-                <div class="text-center"><img src="compilerdiagram.png" /></div>
-                <ul>
-                    <li>
-                        The frontend parses the code you have written and translates it to an intermediate format. 
-                        This intermediate code is not as high level as the source code, but not as low level as assembly code.
-                        During this phase, it checks for syntax errors in the program.
-                    </li>
-                    <li>
-                        The optimizer is responsible for making the code you have written run fast and take up less room. 
-                        It does this by applying various transformations on the intermediate code format that preserve the meaning of your program.
-                        The program that will actually run on the hardware may look nothing like what you actually wrote, but will have the same effect and will take better advantage of the hardware.
-                    </li>
-                    <li>
-                        The backend generates machine code from the intermediate representation.
-                        Each processor family has a different “language” that it understands. So a program that your phone can understand makes no sense to your laptop.
-                        The backend knows which processor it is running on and generates the correct assembly code.
-                    </li>
-                </ul>    
-            </p>
-            <p> 
-                Compilers are very complex computer programs that turn other programs into code that the processor can execute. 
-                The three stage architecture described above allows one compiler to be used on many different processors, and for many languages.
-                GCC is one such processor that is freely available.
-            </p>
+        <div class="container">
+            <div class="row pt-3">
+                <h1>
+                    The GCC Compiler
+                </h1>
+            </div>
+            <div class="row">
+                <a href="/Engl316">Back</a>
+            </div>
+            <div class="row">
+                <p>
+                    The GCC compiler is a computer program that transforms source code from a human-readable format, like the C programming language, to a machine-readable format known as assembly. 
+                    This transformation is necessary because computer hardware doesn’t know how to interpret high level constructs like branching and only understands 1s and 0s. 
+                </p>
+                <p>     
+                    GCC stands for GNU Compiler Collection. 
+                    Thus, it is actually a collection of tools for compiling the code of various programming languages, although when we say the gcc compiler, we are referring to the compiler for the specific language we are using.
+                    It is developed and released for free by the Free Software Foundation.
+                </p>
+                <p>
+                    Compilers consist of 3 stages: the frontend, the optimizer, and the backend.
+
+                    <div class="mx-auto">
+                        <img src="compilerdiagram.png" />
+                    </div>
+
+                    <ul>
+                        <li>
+                            The frontend parses the code you have written and translates it to an intermediate format. 
+                            This intermediate code is not as high level as the source code, but not as low level as assembly code.
+                            During this phase, it checks for syntax errors in the program.
+                        </li>
+                        <li>
+                            The optimizer is responsible for making the code you have written run fast and take up less room. 
+                            It does this by applying various transformations on the intermediate code format that preserve the meaning of your program.
+                            The program that will actually run on the hardware may look nothing like what you actually wrote, but will have the same effect and will take better advantage of the hardware.
+                        </li>
+                        <li>
+                            The backend generates machine code from the intermediate representation.
+                            Each processor family has a different “language” that it understands. So a program that your phone can understand makes no sense to your laptop.
+                            The backend knows which processor it is running on and generates the correct assembly code.
+                        </li>
+                    </ul>    
+                </p>
+                <p> 
+                    Compilers are very complex computer programs that turn other programs into code that the processor can execute. 
+                    The three stage architecture described above allows one compiler to be used on many different processors, and for many languages.
+                    GCC is one such processor that is freely available.
+                </p>
+            </div>
         </div>
     </body>
 </html>
